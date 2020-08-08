@@ -7,14 +7,14 @@ class ChooseLocation extends StatefulWidget {
 
 class _ChooseLocationState extends State<ChooseLocation> {
   int counter = 0;
-  void getDate() async{
-    await Future.delayed(Duration(seconds: 3), () {
-      print("Hmmmmm delayed.");
+  void getDate() async {
+    String str1 = await Future.delayed(Duration(seconds: 3), () {
+      return "Hmmmmm delayed.";
     });
-    Future.delayed(Duration(seconds: 2), () {
-      print("booooo delayed.");
+    String str2 = await Future.delayed(Duration(seconds: 2), () {
+      return "booooo delayed.";
     });
-    print("statement")
+    print("statement : $str1-$str2");
   }
 
   @override
