@@ -26,6 +26,7 @@ class WorldTime {
       now = now.add(Duration(hours: int.parse(offset)));
       time = DateFormat.jm().format(now);
     } catch (e) {
+      print(e);
       time = 'could not get time.';
     }
   }
